@@ -1,0 +1,17 @@
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\NUnit3.TestAdapter.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\NUnit3.TestAdapter.pdb
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\nunit.engine.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\nunit.engine.api.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\TestProject1.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\TestProject1.pdb
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\Microsoft.VisualStudio.CodeCoverage.Shim.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\nunit.framework.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\WebDriver.Support.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\bin\Debug\net472\WebDriver.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\obj\Debug\net472\TestProject1.csprojAssemblyReference.cache
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\obj\Debug\net472\TestProject1.AssemblyInfoInputs.cache
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\obj\Debug\net472\TestProject1.AssemblyInfo.cs
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\obj\Debug\net472\TestProject1.csproj.CoreCompileInputs.cache
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\obj\Debug\net472\TestProject1.csproj.CopyComplete
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\obj\Debug\net472\TestProject1.dll
+D:\курсы\обучение\03,11,2021\TestProject1\TestProject1\obj\Debug\net472\TestProject1.pdb
