@@ -10,6 +10,7 @@ namespace Registration.UITest
     {
         private IWebDriver _webDriver;
 
+
         [SetUp]
         public void Setup()
         {
@@ -62,7 +63,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutEmail();
+            var actualResultat = registrationPage.ErrorTextAboutEmail();
 
             Assert.AreEqual(expected: "Invalid Email", actualResultat);
         }
@@ -80,7 +81,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPassword() + " " + registrationPage.errorTextAboutPasswordUpperCase();
+            var actualResultat = registrationPage.ErrorTextAboutPassword() + " " + registrationPage.ErrorTextAboutPasswordUpperCase();
 
             Assert.AreEqual(expected: "Invalid password format At least one capital letter", actualResultat);
         }
@@ -98,7 +99,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPassword() + " " + registrationPage.errorTextAboutPasswordLowerCase();
+            var actualResultat = registrationPage.ErrorTextAboutPassword() + " " + registrationPage.ErrorTextAboutPasswordLowerCase();
 
             Assert.AreEqual(expected: "Invalid password format At least one lowercase letter", actualResultat);
         }
@@ -117,7 +118,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPassword() + " " + registrationPage.errorTextAboutPasswordLenght();
+            var actualResultat = registrationPage.ErrorTextAboutPassword() + " " + registrationPage.ErrorTextAboutPasswordLenght();
 
             Assert.AreEqual(expected: "Invalid password format From 8 to 25 characters", actualResultat);
         }
@@ -135,7 +136,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPassword() + " " + registrationPage.errorTextAboutPasswordMarks();
+            var actualResultat = registrationPage.ErrorTextAboutPassword() + " " + registrationPage.ErrorTextAboutPasswordMarks();
 
             Assert.AreEqual(expected: "Invalid password format At least one special character such as an exclamation mark", actualResultat);
         }
@@ -153,7 +154,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPassword() + " " + registrationPage.errorTextAboutPasswordNumbers();
+            var actualResultat = registrationPage.ErrorTextAboutPassword() + " " + registrationPage.ErrorTextAboutPasswordNumbers();
 
             Assert.AreEqual(expected: "Invalid password format At least one number", actualResultat);
         }
@@ -171,7 +172,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPasswordMatch();
+            var actualResultat = registrationPage.ErrorTextAboutPasswordMatch();
 
             Assert.AreEqual(expected: "Passwords match", actualResultat);
         }
@@ -189,7 +190,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPhone();
+            var actualResultat = registrationPage.ErrorTextAboutPhone();
 
             Assert.AreEqual(expected: "Invalid phone format", actualResultat);
         }
@@ -207,7 +208,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutFirstName();
+            var actualResultat = registrationPage.ErrorTextAboutFirstName();
 
             Assert.AreEqual(expected: "Required", actualResultat);
         }
@@ -225,7 +226,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutLastName();
+            var actualResultat = registrationPage.ErrorTextAboutLastName();
 
             Assert.AreEqual(expected: "Required", actualResultat);
         }
@@ -243,7 +244,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutEmail();
+            var actualResultat = registrationPage.ErrorTextAboutEmail();
 
             Assert.AreEqual(expected: "Required", actualResultat);
         }
@@ -261,7 +262,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPassword();
+            var actualResultat = registrationPage.ErrorTextAboutPassword();
 
             Assert.AreEqual(expected: "Invalid password format", actualResultat);
         }
@@ -279,7 +280,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutConfitmPassword();
+            var actualResultat = registrationPage.ErrorTextAboutConfitmPassword();
 
             Assert.AreEqual(expected: "Passwords must match", actualResultat);
         }
@@ -297,7 +298,7 @@ namespace Registration.UITest
                 .InputConfirmPassword(confirmPassword)
                 .InputPhoneNumber(phone)
                 .ClickNextButton();
-            var actualResultat = registrationPage.errorTextAboutPhone();
+            var actualResultat = registrationPage.ErrorTextAboutPhone();
 
             Assert.AreEqual(expected: "Invalid phone format", actualResultat);
         }
@@ -306,7 +307,6 @@ namespace Registration.UITest
         public void RegistrationWitfInEmptyCompanyName(string firstName, string lastName, string password, string confirmPassword, string phone, 
                                                        string companyName, string companyWebSite, int count)
         {
-            string name = "Di";
             var registrationPage = new RegistrationPages(_webDriver);
             var home = new HomePage(_webDriver);
                 registrationPage.GoToRegistrationPages()
@@ -323,7 +323,7 @@ namespace Registration.UITest
                 .InputCompanyAddress("3435 Wilshire Boulevard, Los Angeles, CA, USA")
                 .InputCompanyIndustry(count)//1-6 a count of industry. 6 - other, added a new field
                 .ClickOnFinishRegistration();
-            var actualResultat = registrationPage.errorTextAboutCompanyName();
+            var actualResultat = registrationPage.ErrorTextAboutCompanyName();
 
             Assert.AreEqual(expected: "Required", actualResultat);
         }
@@ -332,7 +332,6 @@ namespace Registration.UITest
         public void RegistrationWitfInEmptyCompanyWebSite(string firstName, string lastName, string password, string confirmPassword, string phone,
                                                           string companyName, string companyWebSite, int count)
         {
-            string name = "Di";
             var registrationPage = new RegistrationPages(_webDriver);
             var home = new HomePage(_webDriver);
             registrationPage.GoToRegistrationPages()
@@ -349,7 +348,7 @@ namespace Registration.UITest
                 .InputCompanyAddress("3435 Wilshire Boulevard, Los Angeles, CA, USA")
                 .InputCompanyIndustry(count)//1-6 a count of industry. 6 - other, added a new field
                 .ClickOnFinishRegistration();
-            var actualResultat = registrationPage.errorTextAboutCompanyWebSite();
+            var actualResultat = registrationPage.ErrorTextAboutCompanyWebSite();
 
             Assert.AreEqual(expected: "Required", actualResultat);
         }
@@ -358,7 +357,6 @@ namespace Registration.UITest
         public void RegistrationWitfInEmptyAddress(string firstName, string lastName, string password, string confirmPassword, string phone,
                                                    string companyName, string companyWebSite, int count)
         {
-            string name = "Di";
             var registrationPage = new RegistrationPages(_webDriver);
             var home = new HomePage(_webDriver);
             registrationPage.GoToRegistrationPages()
@@ -375,7 +373,7 @@ namespace Registration.UITest
                 .InputCompanyAddress("")
                 .InputCompanyIndustry(count)//0-6 a count of industry. 6 - other, added a new field
                 .ClickOnFinishRegistration();
-            var actualResultat = registrationPage.errorTextAboutAddress();
+            var actualResultat = registrationPage.ErrorTextAboutAddress();
 
             Assert.AreEqual(expected: "Please choose a location from the suggested addresses. This field doesn’t accept custom addresses, or “#” symbols.", actualResultat);
         }
@@ -385,7 +383,6 @@ namespace Registration.UITest
         public void RegistrationWitfInValidAddress(string firstName, string lastName, string password, string confirmPassword, string phone,
                                                    string companyName, string companyWebSite, int count)
         {
-            string name = "Di";
             var registrationPage = new RegistrationPages(_webDriver);
             var home = new HomePage(_webDriver);
             registrationPage.GoToRegistrationPages()
@@ -402,7 +399,7 @@ namespace Registration.UITest
                 .InputCompanyAddress("zxscascvasqrqfxzavcszdfasfdsafafs")
                 .InputCompanyIndustry(count)//0-6 a count of industry. 6 - other, added a new field
                 .ClickOnFinishRegistration();
-            var actualResultat = registrationPage.errorTextAboutAddress();
+            var actualResultat = registrationPage.ErrorTextAboutAddress();
 
             Assert.AreEqual(expected: "Please choose a location from the suggested addresses. This field doesn’t accept custom addresses, or “#” symbols.", actualResultat);
         }
@@ -411,7 +408,6 @@ namespace Registration.UITest
         public void RegistrationWitfInEmptyIndustry(string firstName, string lastName, string password, string confirmPassword, string phone,
                                                     string companyName, string companyWebSite, int count)
         {
-            string name = "Di";
             var registrationPage = new RegistrationPages(_webDriver);
             var home = new HomePage(_webDriver);
             registrationPage.GoToRegistrationPages()
@@ -429,7 +425,7 @@ namespace Registration.UITest
                 .InputCompanyIndustry(count)
                 .InputOtherIndustry("") //0-6 a count of industry. 6 - other, added a new field
                 .ClickOnFinishRegistration();
-            var actualResultat = registrationPage.errorTextAboutOtherIndustry();
+            var actualResultat = registrationPage.ErrorTextAboutOtherIndustry();
 
             Assert.AreEqual(expected: "Required", actualResultat);
         }

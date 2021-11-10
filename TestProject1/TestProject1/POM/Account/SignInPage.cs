@@ -18,9 +18,16 @@ namespace Selenium.POM
         private readonly By _errorMessageByEmail = By.XPath("//input[@name = 'email']/../div[@class='FormErrorText__error---nzyq']");
         private readonly By _errorMessageByPass = By.XPath("//input[@name = 'password']/../div[@class='FormErrorText__error---nzyq']/div");
 
+        private readonly By _checkSignInPage = By.CssSelector("div[class='PageCard__title--3_OBR']");
+
         public SignInPage(IWebDriver webDriver) 
         {
             _webDriver = webDriver;
+        }
+
+        public string SignInPageCheck()
+        {
+            return _webDriver.FindElement(_checkSignInPage).Text;
         }
 
         public SignInPage GoToSignInPage()
@@ -42,15 +49,15 @@ namespace Selenium.POM
         }
 
         public void ClickLogIn() =>
-             _webDriver.FindElement(_buttonLogIn).Click();
+            _webDriver.FindElement(_buttonLogIn).Click();
 
         public string GetErrorMessage() =>
-             _webDriver.FindElement(_errorMessage).Text;
+            _webDriver.FindElement(_errorMessage).Text;
 
         public string GetErrorMessageAboutMail() =>
-     _webDriver.FindElement(_errorMessageByEmail).Text;
+            _webDriver.FindElement(_errorMessageByEmail).Text;
 
         public string GetErrorMessageAboutPassword() =>
-     _webDriver.FindElement(_errorMessageByPass).Text;
+            _webDriver.FindElement(_errorMessageByPass).Text;
     }
 }

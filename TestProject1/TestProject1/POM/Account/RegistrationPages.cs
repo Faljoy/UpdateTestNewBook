@@ -115,7 +115,7 @@ namespace Selenium.POM
 
         public RegistrationPages InputOtherIndustry(string number)
         {
-            _webDriver.FindElement(_companyWebSite).SendKeys(number);
+            _webDriver.FindElement(_industryOther).SendKeys(number);
             return this;
         }
 
@@ -144,38 +144,38 @@ namespace Selenium.POM
 
         public void ClickOnFinishRegistration() => _webDriver.FindElement(_buttonFinish).Click();
 
-        public string errorTextAboutFirstName() => _webDriver.FindElement(_errorMessageByFirstName).Text;
+        public string ErrorTextAboutFirstName() => _webDriver.FindElement(_errorMessageByFirstName).Text;
 
-        public string errorTextAboutLastName() => _webDriver.FindElement(_errorMessageByLastName).Text;
+        public string ErrorTextAboutLastName() => _webDriver.FindElement(_errorMessageByLastName).Text;
 
-        public string errorTextAboutEmail() => _webDriver.FindElement(_errorMessageByEmail).Text;
+        public string ErrorTextAboutEmail() => _webDriver.FindElement(_errorMessageByEmail).Text;
 
-        public string errorTextAboutPassword() => _webDriver.FindElement(_errorMessageByPassword).Text;
+        public string ErrorTextAboutPassword() => _webDriver.FindElement(_errorMessageByPassword).Text;
 
-        public string errorTextAboutPasswordLenght() => _webDriver.FindElement(_errorMessageByPasswordLenght).Text;
+        public string ErrorTextAboutPasswordLenght() => _webDriver.FindElement(_errorMessageByPasswordLenght).Text;
 
-        public string errorTextAboutPasswordNumbers() => _webDriver.FindElement(_errorMessageByPasswordNumbers).Text;
+        public string ErrorTextAboutPasswordNumbers() => _webDriver.FindElement(_errorMessageByPasswordNumbers).Text;
 
-        public string errorTextAboutPasswordUpperCase() => _webDriver.FindElement(_errorMessageByPasswordUpperCaseLenght).Text;
+        public string ErrorTextAboutPasswordUpperCase() => _webDriver.FindElement(_errorMessageByPasswordUpperCaseLenght).Text;
 
-        public string errorTextAboutPasswordLowerCase() => _webDriver.FindElement(_errorMessageByPasswordLowCaseLetter).Text;
+        public string ErrorTextAboutPasswordLowerCase() => _webDriver.FindElement(_errorMessageByPasswordLowCaseLetter).Text;
 
-        public string errorTextAboutPasswordMatch() => _webDriver.FindElement(_errorMessageByPasswordPasswordMath).Text;
+        public string ErrorTextAboutPasswordMatch() => _webDriver.FindElement(_errorMessageByPasswordPasswordMath).Text;
 
-        public string errorTextAboutPasswordMarks() => _webDriver.FindElement(_errorMessageByPasswordMarks).Text;
+        public string ErrorTextAboutPasswordMarks() => _webDriver.FindElement(_errorMessageByPasswordMarks).Text;
 
-        public string errorTextAboutConfitmPassword() => _webDriver.FindElement(_errorMessageByConfirmPassword).Text;
+        public string ErrorTextAboutConfitmPassword() => _webDriver.FindElement(_errorMessageByConfirmPassword).Text;
 
-        public string errorTextAboutPhone() => _webDriver.FindElement(_errorMessageByPhone).Text;
+        public string ErrorTextAboutPhone() => _webDriver.FindElement(_errorMessageByPhone).Text;
 
-        public string errorTextAboutCompanyName() => _webDriver.FindElement(_errorMessageByCompanyName).Text;
+        public string ErrorTextAboutCompanyName() => _webDriver.FindElement(_errorMessageByCompanyName).Text;
 
-        public string errorTextAboutCompanyWebSite() => _webDriver.FindElement(_errorMessageByCompanyWebSite).Text;
+        public string ErrorTextAboutCompanyWebSite() => _webDriver.FindElement(_errorMessageByCompanyWebSite).Text;
 
-        public string errorTextAboutAddress() => _webDriver.FindElement(_errorMessageByAddress).Text;
+        public string ErrorTextAboutAddress() => _webDriver.FindElement(_errorMessageByAddress).Text;
 
-        public string errorTextAboutIndustry() => _webDriver.FindElement(_errorMessageByIndustry).Text;
+        public string ErrorTextAboutIndustry() => _webDriver.FindElement(_errorMessageByIndustry).Text;
 
-        public string errorTextAboutOtherIndustry() => _webDriver.FindElement(_errorMessageByIndustryOther).Text;
+        public string ErrorTextAboutOtherIndustry() => _webDriver.FindElement(_errorMessageByIndustryOther).Text;
     }
 }
